@@ -1,20 +1,20 @@
-1.274 SELECT COUNT(name) FROM city WHERE countrycode = 'USA';
-2.37032000, 75.1 SELECT population,lifeexpectancy FROM country WHERE name = 'Argentina';
-3.Anorra 83.5 SELECT name,lifeexpectancy FROM country WHERE lifeexpectancy IS NOT NULL ORDER BY lifeexpectancy  DESC LIMIT 1;
-4.?
-5,?
+1.SELECT COUNT(name) FROM city WHERE countrycode = 'USA';
+2.SELECT population,lifeexpectancy FROM country WHERE name = 'Argentina';
+3.SELECT name,lifeexpectancy FROM country WHERE lifeexpectancy IS NOT NULL ORDER BY lifeexpectancy  DESC LIMIT 1;
+4.SELECT city.name FROM city JOIN country ON country.capital=city.id WHERE country.name = 'Spain';
+5.SELECT l.language from countrylanguage AS l JOIN country AS c ON c.code=l.countrycode WHERE c.region = 'Southern and Central Asia';
 6.SELECT name FROM city WHERE name LIKE 'F%' LIMIT 25;
-7.363 SELECT COUNT(name) FROM city WHERE countrycode = 'CHN';
-8.50 Pitcairn SELECT name,population FROM country WHERE population IS NOT NULL AND population != 0 ORDER BY population  ASC LIMIT 1;
-9.239 SELECT COUNT(name) FROM country;
+7.SELECT COUNT(name) FROM city WHERE countrycode = 'CHN';
+8.SELECT name,population FROM country WHERE population IS NOT NULL AND population != 0 ORDER BY population  ASC LIMIT 1;
+9.SELECT COUNT(name) FROM country;
 10.SELECT name,surfacearea FROM country ORDER BY surfacearea DESC LIMIT 10;
 11.SELECT name,population FROM city WHERE countrycode = 'JPN' ORDER BY population DESC LIMIT 5;
-12.?
-13.?
+12.SELECT name,code FROM country WHERE headofstate = 'Elisabeth II';
+13.SELECT name FROM country WHERE surfacearea/population != 0 ORDER BY surfacearea/population DESC LIMIT 10;
 14.SELECT DISTINCT language FROM countrylanguage;
 15.SELECT name,GNP FROM country ORDER BY GNP DESC LIMIT 10;
-16.?
-17.?
+16.SELECT c.name, COUNT(l.language) AS number_of_languages FROM country AS c JOIN countrylanguage AS l ON l.countrycode = c.code GROUP BY l.countrycode ORDER BY number_of_languages DESC LIMIT 10;
+17.SELECT c.name FROM country AS c JOIN countrylanguage AS l ON c.code = l.countrycode WHERE l.percentage > 50 AND l.language = 'German';
 18.SELECT name,lifeexpectancy FROM country WHERE lifeexpectancy IS NOT NULL ORDER BY lifeexpectancy  ASC LIMIT 1;
-19.? 
-20.?
+19.SELECT governmentform,count(governmentform) FROM country GROUP BY governmentform ORDER BY COUNT(governmentform) DESC LIMIT 3;
+20.SELECT COUNT(name) FROM country WHERE indepyear IS NOT NULL;
