@@ -1,20 +1,20 @@
-1.274
-2.37032000, 75.1
-3.Anorra 83.5
+1.274 SELECT COUNT(name) FROM city WHERE countrycode = 'USA';
+2.37032000, 75.1 SELECT population,lifeexpectancy FROM country WHERE name = 'Argentina';
+3.Anorra 83.5 SELECT name,lifeexpectancy FROM country WHERE lifeexpectancy IS NOT NULL ORDER BY lifeexpectancy  DESC LIMIT 1;
 4.?
 5,?
-6.Fagatogo, Florencio Varela, Formosa, Francistown, Fortaleza, Feira de Santana, Franca,FlorianÃ³polis, Foz do IguaÃ§u, Ferraz de Vasconcelos, Francisco Morato, Franco da Rocha, Fuenlabrada, Faridabad, Firozabad, Farrukhabad-cum-Fatehgarh, Faizabad, Fatehpur, Firenze, Foggia, Ferrara, ForlÃ¬, Fukuoka, Funabashi, Fukuyama
-7.363
-8.50 Pitcairn
-9.239
-10.Russian Federation, Antarctica, Canada, China, United States, Brazil, Australia, India, Argentina, Kazakstan
-11.Tokyo, Jokohama, Osaka, Nagoya, Sapporo
+6.SELECT name FROM city WHERE name LIKE 'F%' LIMIT 25;
+7.363 SELECT COUNT(name) FROM city WHERE countrycode = 'CHN';
+8.50 Pitcairn SELECT name,population FROM country WHERE population IS NOT NULL AND population != 0 ORDER BY population  ASC LIMIT 1;
+9.239 SELECT COUNT(name) FROM country;
+10.SELECT name,surfacearea FROM country ORDER BY surfacearea DESC LIMIT 10;
+11.SELECT name,population FROM city WHERE countrycode = 'JPN' ORDER BY population DESC LIMIT 5;
 12.?
 13.?
-14.984
-15.United States, Japan, Germany, France, United Kingdom, Italy, China, Brazil, Canada, Spain
+14.SELECT DISTINCT language FROM countrylanguage;
+15.SELECT name,GNP FROM country ORDER BY GNP DESC LIMIT 10;
 16.?
-17.
-18.Angola
+17.?
+18.SELECT name,lifeexpectancy FROM country WHERE lifeexpectancy IS NOT NULL ORDER BY lifeexpectancy  ASC LIMIT 1;
 19.? 
 20.?
